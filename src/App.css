@@ -1,0 +1,175 @@
+* {
+    margin: 0px;
+    box-sizing:border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background: url(images/background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+.container {
+    padding-bottom: 80px;
+}
+
+.header {
+    font-size: 32px;
+    font-style: normal;
+    background-color: #78493F;opacity:0.9;
+    font-weight: bold; 
+    color: white;
+    padding: 25px;
+    text-align: center;
+    
+}
+.btn {
+  
+    font-size: 50px;
+      text-align: center;
+    margin: 10px;
+    color: white;
+    font-weight: 100;
+     text-align: center;
+    margin: 15px;
+}
+.textInput{
+    text-align:center;
+    width: 100px;
+    height: 100%;
+}
+.fooder{
+      
+
+    background-color: rgb(122,0,0);opacity:0.4;
+    text-align: center;
+    bottom: 80px;
+    margin-bottom: 80px;
+    
+}
+
+.square {
+    height: 500px;
+    width: 305px;
+    left:15%;
+    background-color: white;
+    position: absolute;
+      border-style: solid;
+    
+}
+
+.square2 {
+    height: 500px;
+    width: 305px;
+    left:60%;
+    background-color: white;
+    position: absolute;
+     border-style: solid;
+}
+#chat-window {
+    position: fixed;
+    width: 250px;
+    height: 150px;
+    background-color:white;
+    bottom:0;
+    right:0;
+     border-style: solid;
+  
+    align-items: center;
+    background-image: url(images/chatback.jpg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+    
+}
+#joinBox{
+    position: absolute;
+    text-align: center;
+
+    width: 372px;
+    height: 37px;
+    margin: 5px;
+    margin-left: -15px;
+    margin-top: 1px;
+    left: -50px;
+    
+}
+#joinbut{
+    width: 55px;
+    margin: 5.5px;
+    text-align:center;
+    align-items: center;
+    background-color:darksalmon;
+    padding-left: -5px;
+}
+#inputname{
+    width: 120px;
+    align-items: center;
+    
+    
+}
+#but1{
+    
+      width: 40px;
+    margin: 3px;
+    background-color:darksalmon;
+    padding-left: 5px;
+}
+  
+ #chatBox{
+     position: absolute;
+    text-align: center;
+
+    width: 372px;
+    height: 37px;
+    margin: 5px;
+    margin-left: -15px;
+    margin-top: 1px;
+    left: -50px;
+
+    
+}   
+#inputmsg{
+   width: 120px;
+    align-items: center;
+    left: 72px;
+    position: absolute;
+    bottom: 10px;
+    
+}
+#msgbut{
+    left: 190px;
+        width: 55px;
+    margin: 5.5px;
+    text-align:center;
+    align-items: center;
+    background-color:darksalmon;
+    padding-left: -5px;  
+    position: absolute;
+}
+#but2{
+    left: 255px;
+      width: 40px;
+    margin: 3px;
+    background-color:darksalmon;
+    padding-left: 5px;
+       position: absolute;
+    bottom: 7px;
+}
+#asat{
+    text-align: center;
+    color:firebrick;
+}
+#asatbio{
+    color: black;
+    margin: 5px;
+}
+#jordan{
+    
+    text-align: center;
+    color:firebrick; 
+    
+}
+#jordanbio{
+    
+     color: black;
+    margin: 5px; 
+}

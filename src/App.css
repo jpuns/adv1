@@ -68,16 +68,29 @@ html, body{
 #chat-window {
     position: fixed;
     width: 250px;
-    height: 150px;
+    height: 100px;
     background-color:white;
     bottom:0;
     right:0;
      border-style: solid;
-  
+  margin-top: 80px;
     align-items: center;
     background-image: url(images/chatback.jpg);
       background-repeat: no-repeat;
       background-position: bottom;
+    
+}
+#namaBox{
+    
+    margin-top: 50px;    
+    right: 50px;
+    
+}
+#chatDisplay{
+margin-top: 10px;  
+
+
+    
     
 }
 #joinBox{

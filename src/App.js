@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ChatPanel from './ChatPanel.jsx';
+import Jordan from './comp/Jordan.js';
+import Asat from './comp/Asat.js';
 
 class App extends Component {
     constructor(props){
@@ -9,7 +11,9 @@ class App extends Component {
             
             this.state ={
                 noteText:'',
+                changePages:false
             }
+            this.changeShow = this.changeShow.bind(this);
         
     }
      updateNoteText(noteText){ 
@@ -23,7 +27,25 @@ class App extends Component {
         }
     }
     
+    changeShow(bool){
+        var arg = bool;
+        this.setState({
+            changePages:arg})
+        }
+    
+    
   render() {
+      var bio = null;
+      var bio2 = null;
+      
+        
+            bio = (
+            <Jordan/>
+            )
+            bio2 = (
+            <Asat/>
+            )
+        
     return (
         
      <div className="container">
@@ -35,30 +57,20 @@ class App extends Component {
         
         </div>
         <div className="btn"> Come and join us</div>
-        <div className="square"><img src={require("./images/asat.jpg")} height="300"/>
-        <div id="asat">
-        <h3>Asat</h3>
-        <div id="asatbio">
-        <p>Asat is a flexible and experienced sales person with excellent communication skills and proven interpersonal skills. <br/>He is multilingual, able to speak business level English, Mandarin, Japanese and Turkish. Asat worked in the whole sales department at Prices Cruise Line.</p>
-        </div> 
-        </div> 
-                                          
-         </div>                                  
-        <div className="square2"><div className="pp"><img src={require("./images/puns.png")} height="300"/>
-            
-               <div id="jordan">
-                    <h3>Jordan</h3>
-                   </div>
-               
-              <div id="jordanbio">
-        <p>Jordan is the newest member of BCITease. He is a tenacious learner that offers the company a dynamic range of skills. After completing Business Comm 1 at BCIT, he decided to pursue a career in Sales.<br/> Jordan’s ability to communicate with partners and clients make him an important member of the team.</p></div>
+        
+         <button onClick = {this. readyClick}>Asat</button>
+         
+         {bio2}
+        <button onClick = {this.readyClick}>Jordan</button>
+            {bio}
             
             
             
-            </div></div>
+           
             
             <div>
             <ChatPanel/>
+            
             </div>
         </div>
       

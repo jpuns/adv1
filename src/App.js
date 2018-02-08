@@ -58,10 +58,10 @@ class App extends Component {
         </div>
         <div className="btn"> Come and join us</div>
         
-         <button onClick = {this. readyClick}>Asat</button>
+        
          
          {bio2}
-        <button onClick = {this.readyClick}>Jordan</button>
+        
             {bio}
             
             

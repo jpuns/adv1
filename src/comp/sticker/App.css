@@ -1,0 +1,84 @@
+.App {
+    text-align: center;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 1500px;
+    height: 800px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    
+}
+
+.myDiv1{
+ position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(imgs/bak.JPG);
+    background: cover;
+    background-size: auto;
+
+   
+}
+.myImg{
+    
+ position: absolute;
+     margin: 20px;
+}
+#myImg2{
+  position: absolute;
+    left: 50px; 
+     margin: 20px;
+}
+#myImg3{
+position: absolute;
+   right: 50px;
+}
+#myImg4{
+  position: absolute;
+   right: 250px; 
+     margin: 20px;
+}
+#myImg5{
+  position: absolute;
+   right: 350px;
+    margin: 20px;
+}
+
+.myDiv2{
+   position: absolute;
+   bottom: 0;
+    background-color: coral;
+    width: 50%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 0px;
+    margin: auto;
+    
+    border-style: groove;
+}
+
+#text{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+#mybut{
+ position: absolute;
+  top: 0;
+
+    width: 10%;
+    height: 7%;
+    right: 0px;
+    text-align: center;
+    left: 0px;
+    margin: auto;
+    border-style: groove
+}
+

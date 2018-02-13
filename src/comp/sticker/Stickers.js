@@ -3,7 +3,7 @@ import './App.css';
 
 import mySocket from 'socket.io-client';
 
-class App extends Component {
+class Stickers extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -21,7 +21,7 @@ class App extends Component {
     
     
 componentDidMount(){  
-  this.socket = mySocket("http://localhost:10000");    
+  this.socket = mySocket("https://jordanasatlandingpage3.herokuapp.com/");    
     this.socket.on("userjoined",(data)=>{
         this.setState({
             allusers:data
@@ -115,4 +115,4 @@ if(this.state.myId === null){
   }
 }
 
-export default App;
+export default Stickers;

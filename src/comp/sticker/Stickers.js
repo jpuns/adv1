@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import mySocket from 'socket.io-client';
+import Rooms from "./comp/Rooms";
 
 class Stickers extends Component {
     constructor(props){
@@ -13,50 +14,76 @@ class Stickers extends Component {
             myImg4:require("./imgs/4.png"),
               myImg5:require("./imgs/5.png"),
             allusers:[],
-            myId:null
+            myId:null,
+            showDisplay: false,
+            stickers:[]
         }
+        
     this.handleImage = this.handleImage.bind(this);
-     
+     this.handleDisplay=this.handleDisplay.bind(this);
       }
     
     
 componentDidMount(){  
-  this.socket = mySocket("https://jordanasatlandingpage3.herokuapp.com/");    
-    this.socket.on("userjoined",(data)=>{
-        this.setState({
-            allusers:data
-        })
-        
-    });
+    this.socket = mySocket("https://jordanasatlandingpage3.herokuapp.com/");    //localhost:10000
+        this.socket.on("userjoined",(data)=>{
+            this.setState({
+                allusers:data
+            })
+
+        });
+    
     
     this.socket.on("yourid", (data)=>{
         this.setState({
             myId:data
         })
         
-    })
+        this.refs.thedisplay.addEventListener("mousemove", (ev)=>{ 
+     
+            if(this.state.myId === null){
+
+                return false;
+            }     
+                this.refs["u"+this.state.myId].style.left = ev.pageX+"px";
+                 this.refs["u"+this.state.myId].style.top = ev.pageY+"px";
+
+                 this.socket.emit("mymove", {
+                     x:ev.pageX+"px",
+                     y:ev.pageY+"px",
+                     id:this.state.myId,
+                     src:this.refs["u"+this.state.myId].src
+
+            })
+
+            });
+        
+        this.refs.thedisplay.addEventListener("click",
+                (ev)=>{
+                    this.socket.emit("stick", {
+                        x:ev.pageX+"px",
+                        y:ev.pageY+"px",
+                        src:this.refs["u"+this.state.myId].src
+                    })
+
+                });
+        
+        this.socket.on("newsticker", (data)=>{
+            this.setState({
+                stickers: data
+            })
+        })
+    });
+   
     
-   function myMove() {
-  var elem = document.getElementById("myImg");   
-  var pos = 0;
-  var id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + 'px'; 
-      elem.style.left = pos + 'px'; 
-    }
-  }
+    this.socket.on("newmove",(data)=>{
+        this.refs["u"+data.id].style.left = data.x+"px";
+        this.refs["u"+data.id].style.top = data.y+"px";
+        this.refs["u"+data.id].src = data.src;
+    });    
+    
 }
-    
-this.socket.on("newmove",(data)=>{
-    this.refs["u"+data.id].style.left = data.x+"px";
-    this.refs["u"+data.id].style.top = data.y+"px";
-      this.refs["u"+data.id].src = data.src;
-})    
-    
+/*    
  this.refs.thedisplay.addEventListener("mousemove", (ev)=>{ 
      
 if(this.state.myId === null){
@@ -75,12 +102,20 @@ if(this.state.myId === null){
      })
      
  });
-
+*/
    
-}
+
       
    handleImage(evt){
         this.refs["u"+this.state.myId].src = evt.target.src;
+    }
+    
+    handleDisplay(roomString){
+        this.setState({
+            showDisplay:true
+        });
+        this.socket.emit("joinroom", roomString);
+        
     }
  
   render() {
@@ -91,13 +126,27 @@ if(this.state.myId === null){
        )
        
    })
-      
-   
-    return (
-      <div>
+   var allstickers = this.state.stickers.map((obj, i)=>{
+       var mystyle = {left:obj.x, top:obj.y};
+       
+       return (
+        <img style={mystyle} key={i} src={obj.src} height={50}
+           className="myImg" />
+       )
+   })   
+   var comp = null;
+      if(this.state.showDisplay === false){
+          comp = <Rooms
+            handleDisplay={this.handleDisplay}
+          />;
+          
+      } else {
+          comp = (
+    <div>
         <div ref="thedisplay" className="myDiv1">
-        <button id="mybut" onclick="myMove()">Start Game </button>
+        <button id="mybut">Start Game </button>
            {allimgs}
+            {allstickers}
         </div>
         
         <div className="myDiv2">
@@ -110,6 +159,12 @@ if(this.state.myId === null){
          <img ref="myImg5" id="myImg5" className="myImg" src={this.state.myImg5} height={50} onClick={this.handleImage}/>
       </div>
    </div>
+    )
+      }
+    return (
+      <div className="App">
+        {comp}
+      </div>
    
    );
   }

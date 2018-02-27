@@ -55,8 +55,8 @@ class Landing extends Component {
         <div className="header"> The Digital Agency. </div>
         
         <div onClick={this.playGame} className="fooder"> 
-        <img src={require("../images/house.png")} height="25"/>
-        <p>PLAY STICKERS</p> 
+        <img id="homebut" src={require("../images/house.png")} height="35"/>
+        <button id="playbut">PLAY STICKERS</button> 
         
         </div>
         <div className="btn"> Come and join us</div>

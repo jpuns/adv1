@@ -75,59 +75,93 @@ html, body{
      border-style: solid;
   margin-top: 80px;
     align-items: center;
-    background-image: url(images/chatback.jpg);
+
       background-repeat: no-repeat;
       background-position: bottom;
+    overflow-x: auto;
+    overflow-y: auto;
     
 }
 #namaBox{
+    display: none;
+/*    margin-top: -50px;    */
+/*    right: 50px;*/
+    padding-left: 5px;
+position: absolute;
+    top: 60px;
     
-    margin-top: 50px;    
-    right: 50px;
     
 }
 #chatDisplay{
 margin-top: 10px;  
-
-
-    
-    
+/*right: -300px;*/
+text-align: left;   
+}
+#chatDisplay > div {
+    width: 90%;
+ 
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
 }
 #joinBox{
+/*
     position: absolute;
     text-align: center;
-
     width: 372px;
     height: 37px;
     margin: 5px;
     margin-left: -15px;
     margin-top: 1px;
     left: -50px;
+*/
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
     
 }
 #joinbut{
+/*
     width: 55px;
     margin: 5.5px;
     text-align:center;
     align-items: center;
-    background-color:darksalmon;
     padding-left: -5px;
+*/
+    background-color:darksalmon;
+    width: 49%;
+    display: inline-block;
+    margin-right: 2%;
 }
 #inputname{
+/*
     width: 120px;
     align-items: center;
-    
+*/
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+
     
 }
 #but1{
-    
-      width: 40px;
+/*
+    width: 40px;
     margin: 3px;
-    background-color:darksalmon;
     padding-left: 5px;
+*/
+    background-color:darksalmon;
+    width: 49%;
+    display: inline-block;
 }
   
  #chatBox{
+/*
      position: absolute;
     text-align: center;
 
@@ -137,18 +171,32 @@ margin-top: 10px;
     margin-left: -15px;
     margin-top: 1px;
     left: -50px;
+     background-color: red;
+*/
+     width: 100%;
+     text-align: center;
 
     
-}   
+}
+#controls {
+    background-color: black;
+    padding: 5px;
+}
 #inputmsg{
+/*
    width: 120px;
     align-items: center;
     left: 72px;
     position: absolute;
     bottom: 10px;
     
+*/
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
 }
 #msgbut{
+/*
     left: 190px;
         width: 55px;
     margin: 5.5px;
@@ -157,8 +205,15 @@ margin-top: 10px;
     background-color:darksalmon;
     padding-left: -5px;  
     position: absolute;
+*/
+    width: 49%;
+    margin-right: 2%;
+    background-color: darksalmon;
+    display: inline-block;
+    font-weight: bold;
 }
 #but2{
+/*
     left: 255px;
       width: 40px;
     margin: 3px;
@@ -166,6 +221,12 @@ margin-top: 10px;
     padding-left: 5px;
        position: absolute;
     bottom: 7px;
+*/
+    width: 49%;
+    display: inline-block;
+    background-color: darksalmon;
+     font-weight: bold;
+    
 }
 #asat{
     text-align: center;
@@ -185,4 +246,15 @@ margin-top: 10px;
     
      color: black;
     margin: 5px; 
+}
+#playbut{
+    width: 150px;
+    height: 45px;
+    background-color:firebrick;
+    color: aliceblue;
+    right: 90px;
+    position: absolute;
+    margin-top: -50px;
+    font-size: 25px;
+    font-weight: bold;
 }

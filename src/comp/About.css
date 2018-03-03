@@ -1,0 +1,29 @@
+
+#jpunsbox {
+    
+    height: 30%;
+    bottom: 20%;
+    left: 5%;
+    position:absolute;
+}
+#jpunsbox2 {
+    
+    height: 50%;
+    bottom: 20%;
+    left: 5%;
+    position:absolute;
+}
+#asatbox {
+    
+    height: 30%;
+    bottom: 7%;
+    right: 5%;
+    position:absolute;
+}
+#asatbox2 {
+    
+    height: 50%;
+    bottom: 7%;
+    right: 5%;
+    position:absolute;
+}

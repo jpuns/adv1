@@ -3,9 +3,9 @@
     box-sizing:border-box;
 }
 html, body{
-    width: 100%;
-    height: 100%;
-    background: url(images/background.jpg) no-repeat center center fixed; 
+    width: 100vw;
+    height: 100vh;
+    background: url(images/back.png) no-repeat center center fixed; 
     background-size: cover;
 }
 .container {
@@ -13,13 +13,14 @@ html, body{
 }
 
 .header {
-    font-size: 32px;
-    font-style: normal;
-    background-color: #78493F;opacity:0.9;
+
+
+    background-color: #FFF;opacity:0.7;
     font-weight: bold; 
-    color: white;
-    padding: 25px;
-    text-align: center;
+    color: black;
+    padding: 35px;
+    text-align:justify;
+    height: 30px;
     
 }
 .btn {
@@ -40,11 +41,10 @@ html, body{
 .fooder{
       
 
-    background-color: rgb(122,0,0);opacity:0.4;
-    text-align: center;
-    bottom: 80px;
-    margin-bottom: 80px;
-    
+    background-color: white;
+    opacity: 0.3;
+    text-align:justify
+  
 }
 
 .square {
@@ -60,7 +60,7 @@ html, body{
 .square2 {
     height: 500px;
     width: 305px;
-    left:60%;
+    right:15%;
     background-color: white;
     position: absolute;
      border-style: solid;
@@ -228,33 +228,66 @@ text-align: left;
      font-weight: bold;
     
 }
-#asat{
-    text-align: center;
-    color:firebrick;
-}
-#asatbio{
-    color: black;
-    margin: 5px;
-}
-#jordan{
-    
-    text-align: center;
-    color:firebrick; 
-    
-}
-#jordanbio{
-    
-     color: black;
-    margin: 5px; 
-}
+
 #playbut{
-    width: 150px;
-    height: 45px;
-    background-color:firebrick;
-    color: aliceblue;
-    right: 90px;
+    width: 210px;
+    height: 25px;
+    background-color: white; 
+    color: black;
+    left: 10px;
+    position:relative;
+    font-size: 18px;
+    border:none;
+    
+}
+
+#homebut {
+    margin-left: 10%;
     position: absolute;
-    margin-top: -50px;
-    font-size: 25px;
-    font-weight: bold;
+    
+    top: 0%;
+    height: 100px;
+    
+}
+#tree1 {
+    
+    height: 50%;
+    bottom: 7%;
+    left: 1%;
+    position:absolute;
+}
+#tree2 {
+    
+    height: 40%;
+    bottom: 20%;
+    right: 1%;
+    position:absolute;
+}
+#tree3 {
+    
+    height: 20%;
+    bottom: 0%;
+    left: 20%;
+    position:absolute;
+}
+#aboutbut {
+    
+    height: 30%;
+    bottom: 5%;
+    right: 20%;
+    position:absolute;
+}
+
+#cus {
+    height: 30%;
+    top:40%;
+    left:40%;
+    position: absolute;
+}
+img:hover {
+    transform:translateY( -4px) scale(1.1)
+    ;
+}
+#tagline {
+    margin-top:90px;
 }

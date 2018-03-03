@@ -15,8 +15,8 @@
 
 .myDiv1{
  position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(imgs/bak.png);
@@ -29,27 +29,44 @@
     
  position: absolute;
      margin: 20px;
+    height: 50;
+    
+    
+}
+#myImg1{
+  position: absolute;
+    left: 20px; 
+    height: 50px;
 }
 #myImg2{
   position: absolute;
-    left: 50px; 
-     margin: 20px;
+    left: 20px; 
+    height: 50px;
 }
 #myImg3{
 position: absolute;
-   right: 50px;
+   right: 20px;
+    height: 50px;
 }
 #myImg4{
   position: absolute;
-   right: 250px; 
-     margin: 20px;
+   right: 230px; 
+    height: 50px;
+    top:120px;
 }
 #myImg5{
   position: absolute;
-   right: 350px;
-    margin: 20px;
+   right: 320px;
+    height: 50px;
 }
 
+#myImg6{
+  position: absolute;
+   left: 200px;
+    top: 150px;
+    height: 400px;
+    margin: 20px;
+}
 .myDiv2{
    position: absolute;
    bottom: 0;

@@ -83,14 +83,14 @@ class App extends Component {
     return (
       <div className="App">
         <div className="header">
-            <img id="homebut" onClick={this.home} src={require("./images/header.png")} height="50"/> 
+            <img id="homebut" onClick={this.home} className="hovhead" src={require("./images/header.png")} height="50"/> 
         </div>
         <div className="fooder"> 
         
-        <button id="playbut" onClick={this.custom}>Customize Shoe</button> 
-        <button id="playbut" onClick={this.game1}>Game 1</button>
-        <button id="playbut" onClick={this.game2}>Game 2</button>
-        <button id="playbut" onClick={this.about}>About Us</button>
+        <button id="playbut" className="hovhead2" onClick={this.custom}>Customize Shoe</button> 
+        <button id="playbut" className="hovhead2" onClick={this.game1}>Game 1</button>
+        <button id="playbut" className="hovhead2" onClick={this.game2}>Game 2</button>
+        <button id="playbut" className="hovhead2" onClick={this.about}>About Us</button>
 
         
         </div>

@@ -284,10 +284,20 @@ text-align: left;
     left:40%;
     position: absolute;
 }
-img:hover {
+
+#tagline {
+    margin-top:90px;
+}
+
+img.hov:hover {
     transform:translateY( -4px) scale(1.1)
     ;
 }
-#tagline {
-    margin-top:90px;
+img.hovhead:hover {
+    transform:translateY( -2px) scale(1.0)
+    ;
+}
+.hovhead2:hover {
+    transform:scale(1.1);
+    
 }

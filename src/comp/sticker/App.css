@@ -17,11 +17,8 @@
  position: fixed;
     width: 100vw;
     height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(imgs/bak.png);
-    background: cover;
-    background-size: auto;
+    background-size: cover;
+    background-image: url(imgs/bak.png) no-repeat center center fixed;
 
    
 }
@@ -29,54 +26,192 @@
     
  position: absolute;
      margin: 20px;
-    height: 50;
-    
-    
+    height: 40;
+ 
+}
+
+img.myImg1:hover {
+    transform:translateY( -4px) scale(1.1)
+    ;
 }
 #myImg1{
   position: absolute;
-    left: 20px; 
-    height: 50px;
+    left: 20%; 
+    margin-bottom: 20%;
+    top:35%;
+    height: 40%;
 }
 #myImg2{
   position: absolute;
-    left: 20px; 
-    height: 50px;
+    left: 40%; 
+    height: 40%;
+    top:35%;
+    margin-bottom: 20%;
 }
 #myImg3{
-position: absolute;
-   right: 20px;
-    height: 50px;
+  position: absolute;
+    left: 60%; 
+    height: 40%;
+    top:35%;
+    margin-bottom: 20%;
 }
 #myImg4{
   position: absolute;
-   right: 230px; 
-    height: 50px;
-    top:120px;
+    left: 10%; 
+    margin-bottom: 20%;
+    top:15%;
+    height: 30%;
 }
 #myImg5{
   position: absolute;
-   right: 320px;
-    height: 50px;
+    left: 10%; 
+    height: 17.5%;
+    top:48%;
+    margin-bottom: 20%;
 }
+#myImg7{
+  position: absolute;
+    left: 10%; 
+    height: 24%;
+    top:70%;
+ 
+}
+
+#myImg8{
+  position: absolute;
+    left: 0%; 
+    margin-bottom: 20%;
+    top:35%;
+    height: 40%;
+}
+#myImg9{
+  position: absolute;
+    left: 22%; 
+    height: 40%;
+    top:35%;
+    margin-bottom: 20%;
+}
+#myImg10{
+  position: absolute;
+    left: 45%; 
+    height: 40%;
+    top:35%;
+    margin-bottom: 20%;
+}
+
+#myImg11{
+  position: absolute;
+    left: 1%; 
+    margin-bottom: 20%;
+    top:35%;
+    height: 35%;
+}
+#myImg12{
+  position: absolute;
+    left: 33%; 
+    height: 35%;
+    top:35%;
+    margin-bottom: 20%;
+}
+#myImg13{
+  position: absolute;
+    left: 68%; 
+    height: 35%;
+    top:35%;
+    margin-bottom: 20%;
+}
+#myImg14{
+  position: absolute;
+    left: 5%; 
+    margin-bottom: 20%;
+    top:55%;
+    height: 40%;
+}
+#myImg15{
+  position: absolute;
+    left: 30%; 
+    height: 25%;
+    top:38%;
+    margin-bottom: 20%;
+}
+#myImg16{
+  position: absolute;
+    left: 50%; 
+    height: 10%;
+    top:25%;
+    margin-bottom: 20%;
+}
+
 
 #myImg6{
   position: absolute;
-   left: 200px;
-    top: 150px;
-    height: 400px;
+   left: 290px;
+    bottom: 200px;
+    height: 403px;
     margin: 20px;
 }
 .myDiv2{
    position: absolute;
-   bottom: 0;
+   top: 20;
     background-color: coral;
-    width: 50%;
+    width: 20%;
     height: 20%;
     right: 0px;
     text-align: center;
-    left: 0px;
-    margin: auto;
+    left: 0%;
+    
+    
+    border-style: groove;
+}
+.myDiv3{
+   position: absolute;
+   top: 20;
+    background-color: coral;
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 20%;
+    
+    
+    border-style: groove;
+}
+.myDiv4{
+   position: absolute;
+   top: 20;
+    background-color: coral;
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 40%;
+    
+    
+    border-style: groove;
+}
+.myDiv5{
+   position: absolute;
+   top: 20;
+    background-color: coral;
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 60%;
+    
+    
+    border-style: groove;
+}
+.myDiv6{
+   position: absolute;
+   top: 20;
+    background-color: coral;
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 80%;
+    
     
     border-style: groove;
 }
@@ -85,6 +220,7 @@ position: absolute;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
+    
 }
 #mybut{
  position: absolute;
@@ -99,3 +235,7 @@ position: absolute;
     border-style: groove
 }
 
+#idposition{
+    bottom: 0%;
+    position: absolute;
+}

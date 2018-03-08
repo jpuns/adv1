@@ -8,12 +8,22 @@ class Stickers extends Component {
     constructor(props){
         super(props);
         this.state = {
-            myImg:require("./imgs/1.png"),
-            myImg2:require("./imgs/2.png"),
-           myImg3:require("./imgs/3.png"),
-            myImg4:require("./imgs/4.png"),
-              myImg5:require("./imgs/5.png"),
-                myImg6:require("./imgs/6.png"),
+            myImg1:require("./imgs/tab1.png"),
+            myImg2:require("./imgs/tab2.png"),
+            myImg3:require("./imgs/tab3.png"),
+            myImg4:require("./imgs/base1.png"),
+            myImg5:require("./imgs/base2.png"),
+            myImg6:require("./imgs/7.png"),
+            myImg7:require("./imgs/base3.png"),
+            myImg8:require("./imgs/lace1.png"),
+            myImg9:require("./imgs/lace2.png"),
+            myImg10:require("./imgs/lace3.png"),
+            myImg11:require("./imgs/mid1.png"),
+            myImg12:require("./imgs/mid2.png"),
+            myImg13:require("./imgs/mid3.png"),
+            myImg14:require("./imgs/logo1.png"),
+            myImg15:require("./imgs/logo2.png"),
+            myImg16:require("./imgs/logo3.png"),
             allusers:[],
             myId:null,
             showDisplay: false,
@@ -122,7 +132,7 @@ if(this.state.myId === null){
   render() {
    var allimgs = this.state.allusers.map((obj, i)=>{
        return(
-       <img ref={"u"+obj} className="myImg" src={this.state.myImg} height={117.5} key={i}/>
+       <img ref={"u"+obj} className="myImg" src={this.state.myImg} key={i}/>
        
        )
        
@@ -131,7 +141,7 @@ if(this.state.myId === null){
        var mystyle = {left:obj.x, top:obj.y};
        
        return (
-        <img style={mystyle} key={i} src={obj.src} height={117.5}
+        <img style={mystyle} key={i} src={obj.src} 
            className="myImg" />
        )
    })   
@@ -145,22 +155,54 @@ if(this.state.myId === null){
           comp = (
     <div>
         <div ref="thedisplay" className="myDiv1">
-        <button id="mybut">Start Game </button>
+              
            {allimgs}
             {allstickers}
               <img ref="myImg6" id="myImg6" className="myImg6" src={this.state.myImg6} height={50} />
+              <div id="idposition">{this.state.myId}</div>
         </div>
         
-        <div className="myDiv2">
+    <div className="myDiv2">
               
-        <div id="text"> Enjoy Your Game</div>
-           {this.state.myId}
-         <img ref="myImg" id="myImg" className="myImg" src={this.state.myImg} onClick={this.handleImage}/>
-         <img ref="myImg2" id="myImg2" className="myImg" src={this.state.myImg2} onClick={this.handleImage}/>
-         <img ref="myImg3" id="myImg3" className="myImg" src={this.state.myImg3} onClick={this.handleImage}/>
-         <img ref="myImg4" id="myImg4" className="myImg" src={this.state.myImg4} onClick={this.handleImage}/>
-         <img ref="myImg5" id="myImg5" className="myImg" src={this.state.myImg5}  onClick={this.handleImage}/>
+        <div id="text">Place your base</div>
+         <img ref="myImg1" id="myImg11" className="myImg1" src={this.state.myImg11} onClick={this.handleImage}/>
+         <img ref="myImg2" id="myImg12" className="myImg1" src={this.state.myImg12} onClick={this.handleImage}/>
+         <img ref="myImg3" id="myImg13" className="myImg1" src={this.state.myImg13} onClick={this.handleImage}/>
+        </div>
+
+    <div className="myDiv3">
+              
+        <div id="text">Place your Midsole</div>
+         <img ref="myImg4" id="myImg4" className="myImg1" src={this.state.myImg4} onClick={this.handleImage}/>
+         <img ref="myImg5" id="myImg5" className="myImg1" src={this.state.myImg5}  onClick={this.handleImage}/>
+         <img ref="myImg7" id="myImg7" className="myImg1" src={this.state.myImg7}  onClick={this.handleImage}/>
       </div>
+ 
+    <div className="myDiv4">
+              
+        <div id="text">Place your Lace</div>    
+         <img ref="myImg1" id="myImg8" className="myImg1" src={this.state.myImg8} onClick={this.handleImage}/>
+         <img ref="myImg2" id="myImg9" className="myImg1" src={this.state.myImg9} onClick={this.handleImage}/>
+         <img ref="myImg3" id="myImg10" className="myImg1" src={this.state.myImg10} onClick={this.handleImage}/>
+
+      </div>
+    <div className="myDiv5">
+              
+        <div id="text">Place your Logo</div>
+         <img ref="myImg1" id="myImg14" className="myImg1" src={this.state.myImg14} onClick={this.handleImage}/>
+         <img ref="myImg2" id="myImg15" className="myImg1" src={this.state.myImg15} onClick={this.handleImage}/>
+         <img ref="myImg3" id="myImg16" className="myImg1" src={this.state.myImg16} onClick={this.handleImage}/>
+
+      </div>
+    <div className="myDiv6">
+              
+        <div id="text">Place your backtab</div>   
+         <img ref="myImg1" id="myImg1" className="myImg1" src={this.state.myImg1} onClick={this.handleImage}/>
+         <img ref="myImg2" id="myImg2" className="myImg1" src={this.state.myImg2} onClick={this.handleImage}/>
+         <img ref="myImg3" id="myImg3" className="myImg1" src={this.state.myImg3} onClick={this.handleImage}/>
+ 
+      </div>
+              
    </div>
     )
       }

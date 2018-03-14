@@ -4,6 +4,9 @@ import Landing from './comp/Landing.js';
 import Stickers from './comp/sticker/Stickers.js';
 import About from './comp/About.js';
 import ChatPanel from './ChatPanel.jsx';
+import Test from './comp/sticker/comp/Test.js';
+import Rooms from './comp/sticker/comp/Rooms.js';
+
 
 
 class App extends Component {
@@ -67,11 +70,11 @@ class App extends Component {
           )
       }else if (this.state.changePages == 3){
           myDisplay = (
-          <Stickers changeShow={this.changeShow} />
+          <Test changeShow={this.changeShow} />
           )
       }else if (this.state.changePages == 4){
           myDisplay = (
-          <Stickers changeShow={this.changeShow} />
+          <Test changeShow={this.changeShow} />
           )
       }else if (this.state.changePages == 5){
           myDisplay = (

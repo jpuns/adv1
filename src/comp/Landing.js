@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Jordan from './Jordan.js';
-import Asat from './Asat.js';
+
 
 
 class Landing extends Component {

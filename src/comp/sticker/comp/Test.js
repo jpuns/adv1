@@ -9,12 +9,16 @@ class Test extends Component {
             this.state= {
                 screen: 0,
                 host:null,
-                qobj:{q:null, o1:null, o2:null}
+                qobj:{q:null, o1:null, o2:null},
+                question1:'',
+                myname:"",
+                allnames:[],
             }
+            this.handleName=this.handleName.bind(this);
         }
     
     componentDidMount(){
-        this.socket = mySocket("https://jordanasatlandingpage3.herokuapp.com");
+        this.socket = mySocket("http://localhost:10000"); //https://jordanasatlandingpage3.herokuapp.com //http://localhost:10000
         
         this.socket.on("newq", (data)=>{
             this.setState({
@@ -22,9 +26,12 @@ class Test extends Component {
             })
         })
         this.socket.on("result", (data)=>{
-            alert(data);
+            this.setState({
+                question1:data
         })
-    }
+    })}
+                       
+                       
     
     handleRoom=(roomStr)=>{
         this.setState({
@@ -32,6 +39,14 @@ class Test extends Component {
         });
         
         this.socket.emit("joinroom", roomStr);
+        this.socket.emit("uname", this.state.myname);
+        this.socket.on("names", (data)=>{
+            this.setState({
+                
+                allnames:data
+            });
+            
+        });
     }
     
     handleHost=(isHost)=>{
@@ -50,6 +65,14 @@ class Test extends Component {
         };
         
         this.socket.emit("qsubmit", obj);
+        
+        
+    }
+    handleName(evt){
+        this.setState({
+            myname:evt.target.value
+            
+        })
     }
     
     handleA=(optionNum)=>{
@@ -63,13 +86,14 @@ class Test extends Component {
       if(this.state.screen === 0) {
           comp = (
             <div>
+              <input ref="n" type="text" placeholder="enter your name" onChange={this.handleName}/>
                 <button onClick={this.handleRoom.bind(this, "room1")}> Room1 </button>
                 <button onClick={this.handleRoom.bind(this, "room2")}> Room2 </button>
             </div>
           )
       } else if (this.state.screen === 1) {
           comp = (
-            <div>
+            <div>CHOOSE YOUR ROLE
                 <button onClick={this.handleHost.bind(this, true)}>Host</button>
                 <button onClick={this.handleHost.bind(this, false)}>Player</button>
             </div>
@@ -87,6 +111,8 @@ class Test extends Component {
                         <option value="2">Option 2</option>
                     </select>
                     <button onClick={this.handleQ}>Submit the Question</button>
+                    <div>{this.state.question1}</div>
+                    
                 </div>
               )
           } else if (this.state.host === false){
@@ -95,14 +121,24 @@ class Test extends Component {
                     <div>{this.state.qobj.q}</div>
                     <button onClick={this.handleA.bind(this,"1")}>{this.state.qobj.o1}</button>
                     <button onClick={this.handleA.bind(this,"2")}>{this.state.qobj.o2}</button>
+                    <div>{this.state.question1}</div>
                 </div>
               )
           }
+        else if (this.state.question1 === "Correct"){
+            comp = (
+                <div>Correct!<button>Next Question</button>
+                </div>
+            )
+        }
       }
    
    
     return (
         <div>
+        <p id="allusers">Number of Users Played:{this.state.allnames.length} </p>
+        
+        <p>All Users:{this.state.allnames}</p>
         {comp}
         </div>
    );

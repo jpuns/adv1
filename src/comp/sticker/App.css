@@ -239,3 +239,7 @@ img.myImg1:hover {
     bottom: 0%;
     position: absolute;
 }
+
+#allusers {
+    overflow: auto;
+}

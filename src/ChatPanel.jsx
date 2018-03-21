@@ -28,7 +28,7 @@ class ChatPanel extends Component {
         this.setState({
             mode:1
         })        
-        this.socket = mySocket("http://localhost:10000"); //http://localhost:10000 //https://jordanasatlandingpage2.herokuapp.com/
+        this.socket = mySocket("https://jordanasatlandingpage2.herokuapp.com"); //http://localhost:10000 //https://jordanasatlandingpage2.herokuapp.com/
         this.socket.emit("uname", this.state.myname);
         this.socket.on("names", (date)=>{
             this.setState({

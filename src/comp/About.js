@@ -7,7 +7,8 @@ class About extends Component {
           super(props);
           this.state = {
               showj: true,
-              showa: true
+              showa: true,
+              myImg11:require("./aboutimgs/Asset 22.png"),
           }
         this.jtoggle = this.jtoggle.bind(this);
         this.atoggle = this.atoggle.bind(this);
@@ -75,6 +76,7 @@ class About extends Component {
     return (
                                          
         <div className="about">
+        <img ref="myImg11" id="title11" src={this.state.myImg11}/>
               {jdisplay}
               {adisplay}
             

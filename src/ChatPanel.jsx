@@ -75,7 +75,7 @@ class ChatPanel extends Component {
     }
     
     getHeight() {
-        return this.state.minimized === 1 ? 32 : 400;
+        return this.state.minimized === 1 ? 75 : 390;
     }
     
     

@@ -12,7 +12,8 @@ class Landing extends Component {
             }
             this.playGame = this.playGame.bind(this);
             this.aboutpage = this.aboutpage.bind(this);
-        
+            this.birdpage = this.birdpage.bind(this);
+            this.questionpage = this.questionpage.bind(this);
     }
 
     
@@ -29,6 +30,12 @@ class Landing extends Component {
     aboutpage(){
        this.props.changeShow(5);
    }
+    birdpage(){
+        this.props.changeShow(3);
+    }
+    questionpage(){
+        this.props.changeShow(4);
+    }
     
   render() {
 
@@ -43,8 +50,8 @@ class Landing extends Component {
         
         <div className="homeass">
             <img id="cus" className="hov" onClick={this.playGame} src={require("../images/custom.png")}/>
-            <img id="tree1" className="hov" src={require("../images/tree1.png")}/>
-            <img id="tree2" className="hov" src={require("../images/tree2.png")}/>
+            <img id="tree1" className="hov" onClick={this.questionpage} src={require("../images/questionaire.png")}/>
+            <img id="tree2" className="hov" onClick={this.birdpage} src={require("../images/kick.png")}/>
             <img id="tree3" src={require("../images/tree3.png")}/>
             <img id="aboutbut" className="hov" onClick={this.aboutpage} src={require("../images/about.png")}/>
         </div>

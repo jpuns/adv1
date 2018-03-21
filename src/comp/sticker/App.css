@@ -243,3 +243,142 @@ img.myImg1:hover {
 #allusers {
     overflow: auto;
 }
+#container {
+    height: 30%;
+    top:100px;
+    left: 0%;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+#title1 {
+    height: 10%;
+    top:3%;
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+#title2 {
+    height: 10%;
+    top:40%;
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+#title22 {
+    height: 10%;
+    top:40%;
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+#room1 {
+    height: 20%;
+    top:14%;
+    left: 5%;
+    margin-left: 10%;
+    position: absolute;
+}
+#room2 {
+    height: 20%;
+    top:14%;
+    margin-left: 10%;
+    position: absolute;
+}
+.stepDiv2{
+   position: absolute;
+   bottom: 30%;
+
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 0%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+}
+.stepDiv3{
+   position: absolute;
+   bottom: 30%;
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 20%;
+
+}
+.stepDiv4{
+   position: absolute;
+   bottom: 30%;
+
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 40%;
+ 
+}
+.stepDiv5{
+   position: absolute;
+   bottom: 30%;
+
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 60%;
+    
+
+}
+.stepDiv6{
+   position: absolute;
+   bottom: 30%;
+
+    width: 20%;
+    height: 20%;
+    right: 0px;
+    text-align: center;
+    left: 80%;
+    
+
+}
+#step1 {
+    max-height:120%;
+    position:relative;
+    max-width: 120%;
+    padding: 0;
+    margin: 0;
+
+    
+}
+#alluserscontainer{
+    background-color: #555;
+    color: white;
+    width: 200px;
+    height: auto;
+    display: inline-block;
+    word-wrap: break-word;
+    left: 0%;
+    top: 10%;
+    position: absolute;
+
+}
+select {
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 20px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
